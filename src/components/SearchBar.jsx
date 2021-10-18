@@ -40,7 +40,7 @@ const SearchBar = ({ isLoading }) => {
   
   return (
     <div className="mx-10 px-5 border rounded-lg shadow-xl bg-gray-100 flex items-center">
-      <input ref={searchInputEl} className="bg-gray-100 w-full p-5 text-2xl font-bold text-gray-900 uppercase outline-none" value={searchText} autoFocus placeholder="Search by title..." onChange={handleSearch} aria-label="input search"/>
+      <input ref={searchInputEl} className="bg-gray-100 w-full p-5 text-2xl font-bold text-gray-900 uppercase outline-none" value={searchText} autoFocus placeholder="Search by title..." onChange={handleSearch} aria-label="input search" role="search" type="text"/>
       { isLoading ? <RefreshIcon className="h-8 w-8 text-gray-900" /> : null }
       { searchText && !isLoading ? <XCircleIcon className="h-8 w-8 text-gray-900" onClick={handleClear}/> : null }
     </div>

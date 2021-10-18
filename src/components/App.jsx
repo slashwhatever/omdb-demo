@@ -8,11 +8,11 @@ import Error from './Error.jsx';
 
 const App = ({ items, error, isLoading }) => {
   return (
-    <div className="justify-center">
+    <main className="justify-center">
       <SearchBar isLoading={isLoading}/>
       <List items={items}/>
       <Error error={error}/>
-    </div>
+    </main>
   )
 };
 
